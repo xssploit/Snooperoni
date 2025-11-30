@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNOOPERONI</title>
+    <!--icon-->
+    <link rel="icon" type="image/x-icon" href="./icon.ico">
+    <!--styles-->
+    <link rel="stylesheet" href="./help.css">
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="side"></div>
+    <div class="main">
+        <div class="card mainCard">
+            <div class="card-body">
+                <!--title-->
+                <h1 class="title"><img class="pizzaIcon" src="./icon.png">Sn<span class="titleOO">oo</span>pe<span class="titleO1">ro</span><span class="title02">ni</span></h1>
+                <hr>
+                <h1 class="helpTitle">HELP</h1>
+                <hr>
+                <div class="accordion" id="createNewBotAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#createNewBotAccordionContent" aria-expanded="false" aria-controls="collapseTwo">
+                        Make Bot Token
+                        </button>
+                        </h2>
+                        <div id="createNewBotAccordionContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#createNewBotAccordion">
+                        <div class="accordion-body subCard" id="helpAccordionBody">
+                            <ul>
+                                <li>Search and Enter "BotFather" in telegram</li>
+                                <br>
+                                <li>Type "/newbot" and enter to create a new bot</li><br>
+                                <li>Choose a name and enter</li><br>
+                                <li>Choose a username and enter</li><br>
+                                <li>Copy the TOKEN from result</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="accordion" id="controlPanelBasicAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#controlPanelBasicAccordionContent" aria-expanded="false" aria-controls="collapseTwo">
+                        Control Panel
+                        </button>
+                        </h2>
+                        <div id="controlPanelBasicAccordionContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#controlPanelBasicAccordion">
+                        <div class="accordion-body subCard" id="helpAccordionBody">
+                            <ul>
+                                <li>Enter the Telegram BOT TOKEN and press start button</li><br>
+                                <li>Enter URL path of your website that is hooked with hook.js</li><br>
+                                <li>Select Option</li><br>
+                                <li>Open Chat ID section and select any chatID (data send to this chatID)</li><br>
+                                <li>Modify Options (or go with default options)</li><br>
+                                <li>click Generate</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="accordion" id="informationGatheringAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#informationGatheringAccordionContent" aria-expanded="false" aria-controls="collapseTwo">
+                        Information Gathering Options
+                        </button>
+                        </h2>
+                        <div id="informationGatheringAccordionContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#informationGatheringAccordion">
+                        <div class="accordion-body subCard" id="helpAccordionBody">
+                            <ul>
+                                <li>basic : collect basic details fromm browser (doesnt need any permission to be granted)</li><br>
+                                <li>location : collects GPS location (permission required) </li><br>
+                                <li>Photo : captures photo from User</li><br>
+                                <li>Audio : record Audio from user (5 seconds)</li><br>
+                                <li>Video : record video from user (5 seconds)</li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="accordion" id="remoteXssAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#remoteXssAccordionContent" aria-expanded="false" aria-controls="collapseTwo">
+                        Remote XSS
+                        </button>
+                        </h2>
+                        <div id="remoteXssAccordionContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#remoteXssAccordion">
+                        <div class="accordion-body subCard" id="helpAccordionBody">
+                            <ul>
+                                <li>Set Polling Interval</li><br>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="side"></div>
+
+     <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

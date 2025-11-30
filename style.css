@@ -1,0 +1,284 @@
+body{
+    background-color: #202124 !important;
+    color: #abadae !important;
+    height: 100% !important;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.side{
+    flex: 3;
+}
+
+.main{
+    flex: 2;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.mainCard{
+    background-color: #202124 !important;
+    border: 1px solid #474748 !important;   
+}
+
+.title{
+    text-align: center;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-size: 68px;
+    font-style: normal;
+    color: #f6b445 !important;
+}
+
+.pizzaIcon{
+    width: 70px;
+    height: 70px;
+}
+
+.aboutAccordion{
+    border: 1px solid #474748 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.aboutThisWebsiteAccordionTitle{
+    background-color: #202124 !important;
+    color: whitesmoke !important;
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+}
+
+.accordionAboutContent{
+    background-color: #202124 !important;
+    color: whitesmoke !important;
+    height: 180px !important;
+    overflow-y: auto !important;
+}
+
+.hackEthicallyNotice{
+    color: #f6b445 !important;
+}
+
+/*accordion arrow color change expanded*/
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f5f5f5' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+  transform: rotate(0deg) !important;
+}
+
+/*accordion arrow color change collapsed*/
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg) !important;
+}
+
+
+.termsAndConditionsCard{
+    background-color: #202124 !important;
+    border: 1px solid #474748 !important;
+    height: 200px !important;
+    overflow-y:auto ;
+}
+
+.termsAndConditionsTitle{
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+.termsAndConditionsPoints{
+    font-weight: 600;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    font-size: 25px;
+    box-shadow: none !important;
+    background-color: #6d4f1b;
+    border: none;
+}
+
+input[type="checkbox"]:checked {
+      background-color: #f6b445; /* Green */
+      border-color:#f6b445;
+      color: black !important;
+}
+
+.checkBoxLabel{
+    position: relative;
+    margin-left: 10px;
+    top: 6px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.getStartedButton{
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    font-weight: 900 !important;
+    font-style: normal;
+    font-size: 30px !important;
+    color: #202124 !important;
+}
+
+.otherOptions{
+    text-align: center;
+    font-size: 30px !important;
+    letter-spacing: 5px;
+    cursor: pointer;
+    color: #abadae !important;
+}
+
+.githubLink{
+    color: #abadae !important;
+}
+
+.emailLink{
+    color: #abadae !important;
+}
+
+.myModal{
+    background-color: #202124 !important;
+}
+
+.closeModalButton {
+  filter: invert(76%) sepia(4%) saturate(7%) hue-rotate(169deg) brightness(93%) contrast(88%);
+}
+
+.myModalImage{
+    width: 200px;
+    height: 200px;
+    display: block;
+     margin-left: auto;
+      margin-right: auto;
+}
+
+.myModalTitle{
+    color: whitesmoke !important;
+    font-size: 26px;
+    font-weight: 800;
+    padding: 25px;
+}
+
+.catMessage{
+    text-align: start;
+    margin-left: 6%;
+}
+
+.iWillAgreeButton{
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    width: 100% !important;
+}
+
+.myModalText{
+    text-align: end !important;
+    margin-right: 20%;
+    font-size: 20px;
+    color: #7a7c7d;
+}
+
+.madeWithIcons{
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+.disclaimerLabel{
+    color: #f6b445 !important;
+    text-align: center;
+}
+
+/*scrollbar*/
+
+/* Works on Chrome, Edge, Safari */
+::-webkit-scrollbar {
+      width: 12px;
+}
+
+::-webkit-scrollbar-track {
+      background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 10px;
+      border: 2px solid #1e1e1e;
+}
+
+/*responsive*/
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+  .side{
+        flex: 4 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .side{
+        flex: 2 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .side{
+        flex: 1 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .side{
+        flex: 0 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+
+    .checkBoxLabel{
+        font-size: 14px;
+    }
+
+    .title{
+        font-size: 55px;
+    }
+    .pizzaIcon{
+        width: 60px;
+        height: 60px;
+    }
+    .myModalTitle{
+        padding: 15px;
+    }
+
+    .catMessage{
+        text-align: start;
+        margin-left: 6%;
+    }
+}
+
+

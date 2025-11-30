@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title-->
+    <title>SNOOPERONI</title>
+    <!--icon-->
+    <link rel="icon" type="image/x-icon" href="./icon.ico">
+    <!--styles-->
+    <link rel="stylesheet" href="./style.css">
+
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="side"></div>
+    <!--main card-->
+    <div class="main">
+        <div class="card mainCard">
+            <div class="card-body">
+                <!--hidden button to open modal-->
+                <button id="hiddenButton" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#agreeTermsModal"></button>
+                <!--title-->
+                <h1 class="title"><img class="pizzaIcon" src="./icon.png">Sn<span class="titleOO">oo</span>pe<span class="titleO1">ro</span><span class="title02">ni</span></h1>
+                <hr>
+                <!--about website accordion-->
+                <div class="accordion " id="aboutWebsiteAccordion">
+                    <div class="accordion-item aboutAccordion">
+                        <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed aboutThisWebsiteAccordionTitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            About this Website
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse accordionAboutContent" aria-labelledby="headingTwo" data-bs-parent="#aboutWebsiteAccordion">
+                        <div class="accordion-body">
+                            <p>This website provides simple JavaScript tools to help you learn about ethical hacking and security testing.These tools can be used to:</p>
+                            <br>
+                            <ul>
+                                <li>Collect detailed info from a target (like IP address, device info, browser version, etc.)</li><br>
+                                <li>Try out phishing simulations (for educational purposes only)</li><br>
+                                <li>Test XSS (Cross-Site Scripting) attacks that can be remotely controlled</li><br>
+                                <li>Request access and record/collect things like location, camera, microphone, and even record video or audio (only if the user gives permission)</li>
+                            </ul>
+                            <p>All collected data is sent directly to your Telegram bot, using your own bot token.The website is 100% static, which means it doesn't save any data or run any servers.</p>
+                            <p><strong>⚠️ This site is for education only. Do not use it on real people or websites without clear permission.Misusing these tools can be illegal.</strong></p>
+                            <hr>
+                            <h5 class="hackEthicallyNotice"><strong>Learn safely.<br>Use responsibly.<br>Hack ethically.</strong></h5>
+                            <hr>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!--terms and conditions card-->
+
+                <div class="card termsAndConditionsCard">
+                    <div class="card-body">
+                    
+                    <h3 class="termsAndConditionsTitle">Terms and Conditions</h3>
+                    <hr>
+                    <h4 class="termsAndConditionsPoints">1. For Educational and Legal Use Only</h4>
+                    <p>This website provides JavaScript files that can collect user data for learning, testing, and ethical hacking purposes only.Do not use them to harm, hack, or spy on people or systems without permission.</p>
+                    <br>
+                    <h4 class="termsAndConditionsPoints">2. You Are 100% Responsible</h4>
+                    <p>Whatever you do with the files from this website is your choice and your responsibility.If anything goes wrong — legally, technically, or otherwise — you are fully responsible, not the website or its owner.</p>
+                    <br>
+                    <h4 class="termsAndConditionsPoints">3. No Data Is Stored</h4>
+                    <p>This website is completely static. It does not collect or store any user or target data.Everything you use is loaded directly from the website without any tracking or database behind it.</p>
+                    <br>
+                    <h4 class="termsAndConditionsPoints">4. No Guarantees</h4>
+                    <p>We do not guarantee that the files will always work, be safe, or be up to date.Use them at your own risk.</p>
+                    <br>
+                    <h4 class="termsAndConditionsPoints">5. Not Responsible for Damage</h4>
+                    <p>The owner of this website is not responsible for How you use the scripts,Any damage you cause,Any legal trouble you get into.If you use this website, you accept that you are the only one responsible for your actions.</p>
+                    </div>
+                </div>
+                <hr>
+
+                <!--agree checkbox-->
+                <input id="agree1CheckBox"  class="form-check-input checkbox" type="checkbox" value="" >
+                <label class="form-check-label checkBoxLabel" for="agree1CheckBox">I agree to the Terms and Conditions.</label>
+                <br>
+                <input  id="agree2CheckBox" class="form-check-input checkbox" type="checkbox" value="" >
+                <label class="form-check-label checkBoxLabel" for="agree2CheckBox">I know what i am doing.</label>
+                <hr>
+                <button id="getStartedButton" type="button" class="btn btn-warning btn-lg getStartedButton">Get Started</button>
+            </div>
+        </div>
+
+        <hr>
+        <!--other options-->
+        <div class="otherOptions">
+                <a href="https://github.com/sundaesploits"><i class="bi bi-github githubLink"></i></a>
+                <i class="bi bi-info-circle-fill" data-bs-toggle="modal" data-bs-target="#informationModal"></i>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=sundaesploits@gmail.com&su=Something+I+Noticed+on+Your+Website&tf=cm"><i class="bi bi-envelope-at emailLink"></i></a>
+                
+                
+         </div>
+    </div>
+    <div class="side"></div>
+
+    <!--agree terms warning modal-->
+    <div class="modal fade " id="agreeTermsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content myModal">
+            <div class="modal-body">
+                <button type="button" class="btn-close closeModalButton" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="./foxy.png" class="d-flex justify-content-center myModalImage">
+                <h5 class="modal-title w-100 mb-2">Paw-don Me! 🐾</h5>
+                <div class="myModalTitleDiv">
+                    <h2 class="myModalTitle">"but you must agree to our terms and Conditions to proceed, got it?" </h2>
+                </div>
+            <hr>
+                <button class="iWillAgreeButton btn btn-warning" data-bs-dismiss="modal">Alright, I will</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--website information modal-->
+    <div class="modal fade " id="informationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content myModal">
+            <div class="modal-body">
+                <button type="button" class="btn-close closeModalButton" data-bs-dismiss="modal" aria-label="Close"></button><br>
+                <h1 class="title"><img class="pizzaIcon modalIconTitle" src="./icon.png">Sn<span class="titleOO">oo</span>pe<span class="titleO1">ro</span><span class="title02">ni</span>
+                <img src="./kitty.png" class="d-flex justify-content-center myModalImage">
+                <h5 class="modal-title w-100 mb-2 catMessage">Be Paw-sitive! 🐾</h5>
+                <div class="myModalTitleDiv">
+                    <h2 class="myModalTitle">"A simple tool for collecting browser and device details via the web." <p class="myModalText">--sundaesploits--</p></h2>
+                </div>
+                <hr>
+                <p class="disclaimerLabel"><i class="bi bi-exclamation-triangle-fill"></i> Strictly for Educational Purposes</p>
+                <hr>
+                <p>made with : </p>
+                <span class="madeWithIcons"><i class="bi bi-bootstrap"></i> <i class="bi bi-filetype-html"></i> <i class="bi bi-css"></i> <i class="bi bi-javascript"></i> <i class="bi bi-telegram"></i> <i class="bi bi-git"></i> <i class="bi bi-github"></i></span>
+            <hr>
+                <button class="iWillAgreeButton btn btn-secondary" data-bs-dismiss="modal">Nobody Cares</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--script-->
+    <script src="./script.js"></script>
+
+    <!--bootstrap js + popper-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

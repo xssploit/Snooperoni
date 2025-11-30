@@ -1,0 +1,353 @@
+body{
+    background-color: #202124 !important;
+    color: #abadae !important;
+    height: 100% !important;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.side{
+    flex: 3;
+}
+
+.main{
+    flex: 2;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.mainCard{
+    background-color: #202124 !important;
+    border: 1px solid #474748 !important;   
+}
+
+.pizzaIcon{
+    width: 30px;
+    height: 30px;
+}
+
+.title{
+    text-align: start;
+    margin-left: 10px;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-size: 30px !important;
+    font-style: normal;
+    color: #f6b445 !important;
+}
+
+.normal_input{
+    background-color: #202124 !important;
+    border-color:#474748 !important;
+    color: whitesmoke !important;
+    box-shadow: none !important;
+}
+
+.normal_input::placeholder{
+    color: #abadae !important;
+}
+
+.spanButtons{
+    cursor: pointer;
+    font-weight: 700 !important;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: none !important;
+    background-color: #6d4f1b;  
+    border: none;
+}
+
+input[type="checkbox"]:checked {
+      background-color: #f6b445; /* Green */
+      border-color:#f6b445;
+      color: black !important;
+}
+
+.clearStorageButton{
+    margin-right: 10px;
+    color: #f6b445 !important;
+    cursor: pointer !important;
+}
+
+.normalAccordion-item{
+    border: 1px solid #474748 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.normal-Accordion{
+    background-color: #202124 !important;
+    color: whitesmoke !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    border: 1px solid #474748 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    
+}
+
+.subCard{
+    height: max-content !important;
+    
+}
+
+.accordionContent{
+    background-color: #202124 !important;
+    color: whitesmoke !important;
+    height: 180px !important;
+    overflow-y: auto !important;
+}
+
+
+/*accordion arrow color change*/
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f5f5f5' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E") !important;
+  transform: rotate(0deg) !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg) !important;
+}
+
+.getChatIdHelpUl{
+    color: #abadae !important;
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.highlight{
+    color: #f6b445 !important;
+    text-decoration: none !important;
+}
+
+.selectedChatIdLabel{
+    margin-left: 20px;
+}
+.selectedBotLabel{
+    margin-left: 20px;
+}
+
+.selectedChatId{
+    color: #f6b445 !important;
+    margin-left: 10px;
+}
+
+.selectedBot{
+    color: #f6b445 !important;
+    margin-left: 10px;
+}
+
+.chatIDItemList{
+    background-color: #202124 !important;
+    border: 1px solid #474748 !important;
+    cursor: pointer;
+    margin-bottom: 7px !important;
+}
+
+.chaidIdElement{
+    color: #f6b445 !important;
+    cursor: pointer;
+}
+
+.usernameElement{
+    margin-left: 10%;
+    color: #6d4f1b !important;
+    cursor: pointer;
+}
+.timeElement{
+    margin-left: 10%;
+    color: grey !important;
+    cursor: pointer;
+}
+
+.normalSelect{
+    background-color: #202124 !important;
+    border: 1px solid #474748 !important;
+    color: whitesmoke !important;
+    cursor: pointer;
+    box-shadow: none !important;
+
+}
+
+.subCard{
+    background-color: #202124 !important;
+    border: 1px solid #474748 !important;   
+    color: whitesmoke;
+}
+
+
+.normal-button{
+    width: 100% !important;
+}
+
+.myModal{
+    background-color: #202124 !important;
+}
+
+.selectedOption{
+    color: #f6b445 !important;
+    margin-left: 10px;
+}
+
+/*modal close button color change*/
+.closeModalButton {
+  filter: invert(76%) sepia(4%) saturate(7%) hue-rotate(169deg) brightness(93%) contrast(88%);
+}
+
+.optionsDiv{
+    display: none;
+}
+
+#urlGeneratedDiv{
+    display: none;
+}
+
+#errorOccuredDiv{
+    display: none;
+}
+
+.GnerateModalHeading{
+    color: whitesmoke;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+}
+
+.generateURLFailureReasonList{
+    color: whitesmoke;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.myModalImage{
+    width: 200px;
+    height: 100px;
+    display: block;
+     margin-left: auto;
+      margin-right: auto;
+}
+
+.copiedLabel{
+    display: none;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    background-color: #202124 !important;
+    color: #f6b445 !important;
+    border: 1px solid #f6b445 !important;
+    
+
+}
+
+.copyButton{
+    cursor: pointer;
+}
+
+.copylabelCLoseButton{
+    float: right;
+    cursor: pointer;
+}
+
+.urlShortnerDomainsSelect{
+    background-color: #202124 !important;
+    padding: 2px;
+    color: white;
+    margin-left: 10px;
+    border: 1px solid #f6b445 !important;
+}
+
+.pollingInput{
+    margin-left: 10px;
+}
+
+.helpButton{
+    text-align: center;
+    color: #abadae !important;
+}
+
+.urlSelect{
+    padding: 10px !important;
+    outline: none !important;
+    cursor: pointer;
+}
+
+/* Works on Chrome, Edge, Safari */
+::-webkit-scrollbar {
+      width: 12px;
+}
+
+::-webkit-scrollbar-track {
+      background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+      background-color: #555;
+      border-radius: 10px;
+      border: 2px solid #1e1e1e;
+}
+
+
+
+/*responsive*/
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+  .side{
+        flex: 4 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+}
+
+
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .side{
+        flex: 2 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .side{
+        flex: 1 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+  .side{
+        flex: 0 ;
+    }
+
+    .main{
+        flex: 5 ;
+        padding: 20px;
+        padding-top: 40px;
+    }
+
+    .checkBoxLabel{
+        font-size: 14px;
+    }
+
+    .title{
+        font-size: 55px;
+    }
+}
+
+

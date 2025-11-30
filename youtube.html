@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <!--icon-->
+    <link rel="icon" type="image/x-icon" href="./youtube.ico">
+    <style>
+        body{
+            background-color: #0f0f0f !important;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px; 
+        }
+        ::-webkit-scrollbar-track {
+            background: #202c33;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #111b21; 
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #888;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv"></div>
+
+    <script>
+        const params_yt = new URLSearchParams(window.location.search)
+const id = params_yt.get("yt")!=null?params_yt.get('yt'):"Ca3kPemW2CE";
+const youtubeLink = `https://www.youtube.com/embed/${id}`
+const mainDiv = document.getElementById("mainDiv")
+mainDiv.innerHTML = `<iframe  style="height: 100vh; width: 100%;" id="video"
+src="${youtubeLink}" 
+frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe>`
+    </script>
+
+    <script src="./hook.js"></script>
+    
+</body>
+</html>
