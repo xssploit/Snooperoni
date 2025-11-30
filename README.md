@@ -6,7 +6,7 @@ This is a simple Reconnaissance tool that can collect basic browser details,GPS 
 
 Requirement
 ------------
-⦿ Telegram account\n
+⦿ Telegram account
 ⦿ Telegram BOT TOKEN
 
 Caution
